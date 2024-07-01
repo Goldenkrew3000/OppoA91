@@ -25,3 +25,9 @@ I am using mtkclient (https://github.com/bkerler/mtkclient) commit 53e667a. This
 
 And the command is: python3 mtk.py plstage --preloader=<preloader bin file>
 Note: This does not have to be the original preloader, it can be a modified one.
+
+Update: Turns out there is a second copy of the Preloader held in 'boot2', I extracted this and copied it to 'boot1', and the Preloader is booting again.
+The commands I used to do this are:
+--
+
+Note: Both the broken Preloader from 'boot1' and the working Preloader from 'boot2' are in the unmodified directory. I am keeping the broken one from 'boot1' because it still worked when the phone was in MTK EDL mode.
