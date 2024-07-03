@@ -3,7 +3,7 @@
 ## How to setup and run
 ### Setup the android-like environment to keep the drivers happy
 Firstly, extract your 'system' and 'vendor' partitions using MTKClient, and extract the 2 images (I used 7zip) into folders. <br>
-In the root of your filesystem, make the following folder structure: <brr>
+In the root of your filesystem, make the following folder structure: <br>
 /system <br>
 /system/bin <br>
 /system/lib <br>
