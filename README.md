@@ -6,4 +6,4 @@ This is not a functional project at the moment. I have been working on this for 
 
 # Photos
 ## Running XFCE in Xorg with fbdev (Picture says PostmarketOS but it is this, its displayed just in case I ever port the device to proper PostmarketOS)
-![alt text](https://github.com/goldenkrew3000/OppoA91/blob/main/Photos/RunningXFCE.png?raw=true)
+![alt text](https://github.com/goldenkrew3000/OppoA91/blob/main/Photos/RunningXFCE.jpg?raw=true)
