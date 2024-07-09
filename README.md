@@ -2,7 +2,8 @@
 Turning the Oppo A91 into a fully functioning Linux Server
 
 # PLEASE READ THIS
-This is not a functional project at the moment. I have been working on this for over a year, and have recently made some major advancements with this and have decided to make this public.
+I am not responsible for ANYTHING that goes wrong here. This is _incredibly_ experimental. <br>
+PLEASE take a full single file backup, every partition backup, and preloader backup of your phone before interacting with ANYTHING here. You can always recover these devices from any state if you have these files. <br>
 
 # Photos
 ## Running XFCE in Xorg with fbdev (Picture says PostmarketOS but it is this, its displayed just in case I ever port the device to proper PostmarketOS)

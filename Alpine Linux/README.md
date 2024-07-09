@@ -50,7 +50,7 @@ Note: If you do not want USB networking, still add the top 2 lines as this sets 
 auto lo
 iface lo inet loopback
 auto eth0
-ifcace eth0 inet dhcp
+iface eth0 inet dhcp
 ```
 
 ## Step 6 - Set a password
@@ -66,4 +66,23 @@ rc-update add sshd default
 ```
 Note: If you did not create a new user (bad security practice ```*bonk*```), don't forget to allow root login at ```/etc/ssh/sshd_config```
 
-## (Optional) Step 8 - (2.4GHz) WiFi
+## Step 8 - Boot
+Note: Go to the ```Initrds``` folder in this repository to find out more info on actually booting the device. <br>
+
+## (Optional) Step 9 - (2.4GHz) WiFi
+Follow the instructions in the ```Software Development/Wifi``` folder of this repository. <br> TODO
+
+## (Optional) Step 10 - Copy the rootfs from the SD Card to the internal UFS
+Note: This will wipe your ```userdata``` and possibly (Depending on how you setup the initrd) the ```system``` partitions of your device. <br>
+Note: Go to the ```Initrds``` folder in this repository to find out more info on actually booting from the UFS. <br>
+Note: This guide assumes that your ```userdata``` partition is ```/dev/sdc41``` <br>
+Firstly, boot into the SD Card rootfs on the phone
+
+
+Firstly, boot into the Debug Initrd. When it comes up with the login over UART, just press ```Ctrl + C``` to get to the terminal. <br>
+Now setup and mount the SD Card rootfs with the following commands:
+```
+```
+Now mount the ```userdata``` partition of the UFS with the following commands:
+``` TODO
+```
