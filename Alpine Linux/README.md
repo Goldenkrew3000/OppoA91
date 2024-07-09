@@ -40,5 +40,30 @@ rc-update add killprocs shutdown
 rc-update add savecache shutdown
 ```
 And install ```dhclient``` with ```apk add dhclient``` <br>
-Now you have to edit ```/etc/inittab``` to remove all ```tty1-6``` terminals and modify the ```ttyS0``` line to read ```ttyS0::respawn:/sbin/getty -L 921600 ttyS0 vt100``` <br>
+You also have to install a text editor (nano / vim): ```apk add vim``` <br>
+Now you have to edit ```/etc/inittab``` to remove all ```tty1-6``` terminals and modify the ```ttyS0``` line to be ```ttyS0::respawn:/sbin/getty -L 921600 ttyS0 vt100``` <br>
 
+## Step 5 - USB Networking
+To obtain wired networking through a USB Ethernet dongle during boot automatically, add the following to ```/etc/network/interfaces``` <br>
+Note: If you do not want USB networking, still add the top 2 lines as this sets up the local loopback <br>
+```
+auto lo
+iface lo inet loopback
+auto eth0
+ifcace eth0 inet dhcp
+```
+
+## Step 6 - Set a password
+Set a password because otherwise you won't be able to login with ```passwd``` <br>
+At this point, you can also make a new non-root user with Alpine's ```setup-user``` command. If you do, don't forget to install sudo with ```apk add sudo``` <br>
+
+## Step 7 - Install OpenSSH Server
+The device cannot be used through the touchscreen alone (This is super super alpha software) and the UART is kind of dreadful to use for anything past short commands. <br>
+Install and configure OpenSSH Server to start on boot with the following commands: <br>
+```
+apk add openssh
+rc-update add sshd default
+```
+Note: If you did not create a new user (bad security practice ```*bonk*```), don't forget to allow root login at ```/etc/ssh/sshd_config```
+
+## (Optional) Step 8 - (2.4GHz) WiFi
